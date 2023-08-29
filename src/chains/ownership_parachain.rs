@@ -12,18 +12,14 @@
 // GNU General Public License for more details.
 
 // You should have received a copy of the GNU General Public License
-// along with Parity Bridges Common.  If not, see <http://www.gnu.org/licenses/>.
+// along with Parity Bridges Common. If not, see <http://www.gnu.org/licenses/>.
 
-//! Substrate-to-substrate relay entrypoint.
+//! Ownership parachain specification for CLI.
 
-#![warn(missing_docs)]
+use crate::cli::CliChain;
+use relay_laos_ownership_client::OwnershipParachain;
+use relay_substrate_client::SimpleRuntimeVersion;
 
-mod bridges;
-mod chains;
-mod cli;
-
-fn main() {
-    let command = cli::parse_args();
-    let run = command.run();
-    async_std::task::block_on(run);
+impl CliChain for OwnershipParachain {
+	const RUNTIME_VERSION: Option<SimpleRuntimeVersion> = None;
 }

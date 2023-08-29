@@ -14,16 +14,14 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity Bridges Common.  If not, see <http://www.gnu.org/licenses/>.
 
-//! Substrate-to-substrate relay entrypoint.
+//! Evochain chain specification for CLI.
 
-#![warn(missing_docs)]
+use crate::cli::CliChain;
+use node_template_runtime as evochain_runtime;
+use relay_laos_evolution_client::Evochain;
+use relay_substrate_client::SimpleRuntimeVersion;
 
-mod bridges;
-mod chains;
-mod cli;
-
-fn main() {
-    let command = cli::parse_args();
-    let run = command.run();
-    async_std::task::block_on(run);
+impl CliChain for Evochain {
+	const RUNTIME_VERSION: Option<SimpleRuntimeVersion> =
+		Some(SimpleRuntimeVersion::from_runtime_version(&evochain_runtime::VERSION));
 }

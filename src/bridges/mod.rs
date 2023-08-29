@@ -14,16 +14,6 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity Bridges Common.  If not, see <http://www.gnu.org/licenses/>.
 
-//! Substrate-to-substrate relay entrypoint.
+//! Declaration of all bridges that the relay is able to serve.
 
-#![warn(missing_docs)]
-
-mod bridges;
-mod chains;
-mod cli;
-
-fn main() {
-    let command = cli::parse_args();
-    let run = command.run();
-    async_std::task::block_on(run);
-}
+pub mod ownership_parachain_evochain;
