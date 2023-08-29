@@ -1,5 +1,5 @@
 [package]
-name = "laos-bridge"
+name = "laos-relay"
 version = "0.1.0"
 edition = "2021"
 authors = ["Freeverse"]
