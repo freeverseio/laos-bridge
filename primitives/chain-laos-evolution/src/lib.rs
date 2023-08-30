@@ -8,8 +8,8 @@ pub use evochain_primitives::*;
 
 use bp_header_chain::ChainWithGrandpa;
 use bp_messages::{
-	ChainWithMessages, InboundMessageDetails, LaneId, MessageNonce, MessagePayload,
-	OutboundMessageDetails,
+    ChainWithMessages, InboundMessageDetails, LaneId, MessageNonce, MessagePayload,
+    OutboundMessageDetails,
 };
 use bp_runtime::{decl_bridge_finality_runtime_apis, decl_bridge_runtime_apis, Chain, ChainId};
 
@@ -63,56 +63,56 @@ pub const AVERAGE_HEADER_SIZE_IN_JUSTIFICATION: u32 = 256;
 ///
 /// See [`bp-header-chain::ChainWithGrandpa`] for more details.
 pub const MAX_HEADER_SIZE: u32 = MAX_AUTHORITIES_COUNT
-	.saturating_mul(3)
-	.saturating_add(AVERAGE_HEADER_SIZE_IN_JUSTIFICATION);
+    .saturating_mul(3)
+    .saturating_add(AVERAGE_HEADER_SIZE_IN_JUSTIFICATION);
 
 /// Evochain chain.
 #[derive(RuntimeDebug)]
 pub struct Evochain;
 
 impl Chain for Evochain {
-	const ID: ChainId = *b"evol";
+    const ID: ChainId = *b"evol";
 
-	type BlockNumber = BlockNumber;
-	type Hash = Hash;
-	type Hasher = Hasher;
-	type Header = Header;
+    type BlockNumber = BlockNumber;
+    type Hash = Hash;
+    type Hasher = Hasher;
+    type Header = Header;
 
-	type AccountId = AccountId;
-	type Balance = Balance;
-	type Nonce = Nonce;
-	type Signature = Signature;
+    type AccountId = AccountId;
+    type Balance = Balance;
+    type Nonce = Nonce;
+    type Signature = Signature;
 
-	const STATE_VERSION: StateVersion = StateVersion::V0;
+    const STATE_VERSION: StateVersion = StateVersion::V0;
 
-	fn max_extrinsic_size() -> u32 {
-		*BlockLength::get().max.get(DispatchClass::Normal)
-	}
+    fn max_extrinsic_size() -> u32 {
+        *BlockLength::get().max.get(DispatchClass::Normal)
+    }
 
-	fn max_extrinsic_weight() -> Weight {
-		BlockWeights::get()
-			.get(DispatchClass::Normal)
-			.max_extrinsic
-			.unwrap_or(Weight::MAX)
-	}
+    fn max_extrinsic_weight() -> Weight {
+        BlockWeights::get()
+            .get(DispatchClass::Normal)
+            .max_extrinsic
+            .unwrap_or(Weight::MAX)
+    }
 }
 
 impl ChainWithGrandpa for Evochain {
-	const WITH_CHAIN_GRANDPA_PALLET_NAME: &'static str = WITH_EVOCHAIN_GRANDPA_PALLET_NAME;
-	const MAX_AUTHORITIES_COUNT: u32 = MAX_AUTHORITIES_COUNT;
-	const REASONABLE_HEADERS_IN_JUSTIFICATON_ANCESTRY: u32 =
-		REASONABLE_HEADERS_IN_JUSTIFICATON_ANCESTRY;
-	const MAX_HEADER_SIZE: u32 = MAX_HEADER_SIZE;
-	const AVERAGE_HEADER_SIZE_IN_JUSTIFICATION: u32 = AVERAGE_HEADER_SIZE_IN_JUSTIFICATION;
+    const WITH_CHAIN_GRANDPA_PALLET_NAME: &'static str = WITH_EVOCHAIN_GRANDPA_PALLET_NAME;
+    const MAX_AUTHORITIES_COUNT: u32 = MAX_AUTHORITIES_COUNT;
+    const REASONABLE_HEADERS_IN_JUSTIFICATON_ANCESTRY: u32 =
+        REASONABLE_HEADERS_IN_JUSTIFICATON_ANCESTRY;
+    const MAX_HEADER_SIZE: u32 = MAX_HEADER_SIZE;
+    const AVERAGE_HEADER_SIZE_IN_JUSTIFICATION: u32 = AVERAGE_HEADER_SIZE_IN_JUSTIFICATION;
 }
 
 impl ChainWithMessages for Evochain {
-	const WITH_CHAIN_MESSAGES_PALLET_NAME: &'static str = WITH_EVOCHAIN_MESSAGES_PALLET_NAME;
+    const WITH_CHAIN_MESSAGES_PALLET_NAME: &'static str = WITH_EVOCHAIN_MESSAGES_PALLET_NAME;
 
-	const MAX_UNREWARDED_RELAYERS_IN_CONFIRMATION_TX: MessageNonce =
-		MAX_UNREWARDED_RELAYERS_IN_CONFIRMATION_TX;
-	const MAX_UNCONFIRMED_MESSAGES_IN_CONFIRMATION_TX: MessageNonce =
-		MAX_UNCONFIRMED_MESSAGES_IN_CONFIRMATION_TX;
+    const MAX_UNREWARDED_RELAYERS_IN_CONFIRMATION_TX: MessageNonce =
+        MAX_UNREWARDED_RELAYERS_IN_CONFIRMATION_TX;
+    const MAX_UNCONFIRMED_MESSAGES_IN_CONFIRMATION_TX: MessageNonce =
+        MAX_UNCONFIRMED_MESSAGES_IN_CONFIRMATION_TX;
 }
 
 /// Name of the With-Evochain GRANDPA pallet instance that is deployed at bridged chains.
