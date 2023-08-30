@@ -31,7 +31,7 @@ bp-runtime = { git = "https://github.com/freeverseio/parity-bridges-common.git",
 bridge-runtime-common = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
 pallet-bridge-parachains = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
 pallet-bridge-messages = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
-
+relay-rococo-client = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
 relay-substrate-client = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
 relay-utils = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
 # we are not using this runtime to craft call or transactions, but we still need it
