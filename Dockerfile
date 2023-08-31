@@ -4,12 +4,6 @@ FROM docker.io/paritytech/ci-linux:production as builder
 WORKDIR /laos
 COPY . /laos
 
-# RUN apt update
-# RUN apt upgrade -yy
-# RUN apt-get install -y clang libssl-dev llvm libudev-dev protobuf-compiler pkg-config
-
-# RUN rustup toolchain install nightly
-# RUN rustup target add wasm32-unknown-unknown --toolchain nightly 
 RUN SKIP_WASM_BUILD=1 cargo build --release
 
 # This is the 2nd stage: a very small image where we copy the laos binary."
