@@ -8,20 +8,15 @@ codec = { package = "parity-scale-codec", version = "3.1.5" }
 scale-info = { version = "2.9.0", default-features = false, features = ["derive"] }
 subxt = { version = "0.30.1", default-features = false, features = ["native"] }
 
-# Bridge dependencies
-
-bp-bridge-hub-cumulus = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
-bp-header-chain = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
-bp-messages = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
-bp-laos-evolution = { path = "../../primitives/chain-laos-evolution" }
-bp-laos-ownership = { path = "../../primitives/chain-laos-ownership" }
-bp-polkadot-core = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
-
-bridge-runtime-common = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
-relay-substrate-client = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
-
-# Substrate Dependencies
-
+bp-bridge-hub-cumulus = { git = "https://github.com/paritytech/parity-bridges-common.git", branch = "polkadot-v1.0.0", default-features = false }
+bp-header-chain = { git = "https://github.com/paritytech/parity-bridges-common.git", branch = "polkadot-v1.0.0", default-features = false }
+bp-messages = { git = "https://github.com/paritytech/parity-bridges-common.git", branch = "polkadot-v1.0.0", default-features = false }
+bp-polkadot-core = { git = "https://github.com/paritytech/parity-bridges-common.git", branch = "polkadot-v1.0.0", default-features = false }
+bridge-runtime-common = { git = "https://github.com/paritytech/parity-bridges-common.git", branch = "polkadot-v1.0.0" }
+relay-substrate-client = { git = "https://github.com/paritytech/parity-bridges-common.git", branch = "polkadot-v1.0.0" }
 sp-core = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v1.0.0" }
 sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v1.0.0" }
 sp-weights = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v1.0.0" }
+
+bp-laos-evolution = { path = "../../primitives/chain-laos-evolution" }
+bp-laos-ownership = { path = "../../primitives/chain-laos-ownership" }

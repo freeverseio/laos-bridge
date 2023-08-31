@@ -1,9 +1,8 @@
 [package]
 name = "laos-relay"
-version = "1.0.1"
-authors = ["Parity Technologies <admin@parity.io>"]
+version = "0.1.0"
 edition = "2021"
-license = "GPL-3.0-or-later WITH Classpath-exception-2.0"
+authors = ["Freeverse"]
 
 [dependencies]
 anyhow = "1.0"
@@ -22,38 +21,32 @@ signal-hook = "0.3.16"
 signal-hook-async-std = "0.2.2"
 strum = { version = "0.25.0", features = ["derive"] }
 
+relay-laos-evolution-client = { path="../client-laos-evolution", default-features = false }
+relay-laos-ownership-client = { path="../client-laos-ownership", default-features = false }
+
 # Bridge dependencies
-evochain-primitives = { git = "https://github.com/freeverseio/laos-evolution-node", branch = "dev" }
-bp-header-chain = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
-bp-messages = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
-bp-parachains = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
-bp-runtime = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
-bridge-runtime-common = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
-pallet-bridge-parachains = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
-pallet-bridge-messages = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
-relay-rococo-client = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
-relay-substrate-client = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
-relay-utils = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
+bp-header-chain = { git = "https://github.com/paritytech/parity-bridges-common.git", branch = "polkadot-v1.0.0", default-features = false }
+bp-messages = { git = "https://github.com/paritytech/parity-bridges-common.git", branch = "polkadot-v1.0.0", default-features = false }
+bp-runtime = { git = "https://github.com/paritytech/parity-bridges-common.git", branch = "polkadot-v1.0.0", default-features = false }
+bridge-runtime-common = { git = "https://github.com/paritytech/parity-bridges-common.git", branch = "polkadot-v1.0.0", default-features = false }
+pallet-bridge-parachains = { git = "https://github.com/paritytech/parity-bridges-common.git", branch = "polkadot-v1.0.0", default-features = false }
+relay-substrate-client = { git = "https://github.com/paritytech/parity-bridges-common.git", branch = "polkadot-v1.0.0", default-features = false }
+relay-utils = { git = "https://github.com/paritytech/parity-bridges-common.git", branch = "polkadot-v1.0.0", default-features = false }
+
 # we are not using this runtime to craft call or transactions, but we still need it
 # to prepare large XCM messages
-substrate-relay-helper = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
+substrate-relay-helper = { git = "https://github.com/paritytech/parity-bridges-common.git", branch = "polkadot-v1.0.0", default-features = false }
 
-# Local relay clients
-relay-laos-evolution-client = { path = "../client-laos-evolution" }
-relay-laos-ownership-client = { path = "../client-laos-ownership" }
-
-# LAOS runtimes
+# Chain primitives
+evochain-primitives = { git = "https://github.com/freeverseio/laos-evolution-node", branch = "dev" }
 node-template-runtime = { git = "https://github.com/freeverseio/laos-evolution-node", branch = "dev" }
-laos-runtime = { git = "https://github.com/freeverseio/laos-ownership-node.git", branch = "dev" }
 
 # Substrate Dependencies
-frame-support = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v1.0.0" }
 sp-core = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v1.0.0" }
-sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v1.0.0" }
 
 [dev-dependencies]
-bp-test-utils = { git = "https://github.com/freeverseio/parity-bridges-common.git", branch = "dev" }
+bp-test-utils = { git = "https://github.com/paritytech/parity-bridges-common.git", branch = "polkadot-v1.0.0", default-features = false }
 hex-literal = "0.4"
-sp-keyring = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v1.0.0", default-features = false }
+sp-keyring = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v1.0.0" }
 tempfile = "3.7"
 finality-grandpa = { version = "0.16.2" }
