@@ -6,11 +6,14 @@ For an in-depth understanding of the LAOS system, refer to the [LAOS Technical W
 
 ### Relay
 
-`laos-relay` is used to establish bridge between LAOS chains. It currently supports one-way bridge from LAOS evolution chain to LAOS ownership parachain. It syncs latest finalized header, submits finality proof to a light client installed in ownership parachain. It is a modified, customized version of [substrate-relay](https://github.com/paritytech/parity-bridges-common/tree/master/relays/bin-substrate).
+`laos-relay` is used to establish bridge between LAOS chains. It currently supports two light-client based bridges: from LAOS evolution chain to LAOS ownership parachain and from [Rococo](https://substrate.io/developers/rococo-network/) relaychain to LAOS evolution chain.
+
+It syncs latest finalized header, submits finality proof to a light client installed in the target chain and is a modified, customized version of [substrate-relay](https://github.com/paritytech/parity-bridges-common/tree/master/relays/bin-substrate). Currently it doesn't support messaging between the chains, only finality sync.
 
 *Supported Bridges*:
 
-- `evochain-to-ownership-parachain` - one-way bridge from LAOS evolution chain to LAOS ownership parachain.
+- `evochain-to-ownership-parachain` - finality sync bridge from LAOS evolution chain to LAOS ownership parachain.
+- `rococo-to-evochain` - finality sync bridge from Rococo relaychain to LAOS evolution chain.
 
 *Commands*:
 
