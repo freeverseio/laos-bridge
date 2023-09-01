@@ -11,7 +11,7 @@ It syncs latest finalized header, submits finality proof to a light client insta
 *Supported Bridges*:
 
 - `evochain-to-ownership-parachain` - finality sync bridge from LAOS evolution chain to LAOS ownership parachain.
-- `rococo-to-evochain` - finality sync bridge from LAOS evolution chain to LAOS ownership parachain.
+- `rococo-to-evochain` - finality sync bridge from Rococo relaychain to LAOS evolution chain.
 
 *Commands*:
 
