@@ -1,5 +1,5 @@
 [package]
-name = "bridge-runtime-common"
+name = "laos-bridge-runtime-common"
 version = "0.1.0"
 authors = ["Freeverse"]
 edition = "2021"
