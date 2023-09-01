@@ -33,6 +33,7 @@ use std::time::Duration;
 
 /// Evochain header id.
 pub type HeaderId = relay_utils::HeaderId<evochain_runtime::Hash, evochain_runtime::BlockNumber>;
+pub type RuntimeCall = evochain_runtime::RuntimeCall;
 
 /// Evochain chain definition.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]

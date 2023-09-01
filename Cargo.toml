@@ -1,7 +1,6 @@
 [workspace]
 members = [
 	"relays/*",
-	"primitives/chain-laos-ownership",
-	"primitives/chain-laos-evolution",
+	"primitives/*",
 ]
 resolver = "2"

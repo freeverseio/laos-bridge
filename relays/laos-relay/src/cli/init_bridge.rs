@@ -122,8 +122,18 @@ impl BridgeInitializer for RococoToEvochainCliBridge {
     fn encode_init_bridge(
         init_data: <Self::Engine as Engine<Self::Source>>::InitializationData,
     ) -> <Self::Target as Chain>::Call {
-        laos_evolution_runtime::BridgeRococoGrandpaCall::<laos_evolution_runtime::Runtime, ()>::initialize { init_data }
-            .into()
+        let initialize_call = laos_evolution_runtime::BridgeRococoGrandpaCall::<
+            laos_evolution_runtime::Runtime,
+            (),
+        >::initialize {
+            init_data,
+        };
+
+        relay_laos_evolution_client::RuntimeCall::Sudo(pallet_sudo::Call::<
+            laos_evolution_runtime::Runtime,
+        >::sudo {
+            call: Box::new(initialize_call.into()),
+        })
     }
 }
 

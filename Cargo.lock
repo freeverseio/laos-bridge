@@ -4259,6 +4259,7 @@ dependencies = [
  "num-format",
  "num-traits",
  "pallet-bridge-parachains",
+ "pallet-sudo",
  "parity-scale-codec",
  "rbtag",
  "relay-laos-evolution-client",
