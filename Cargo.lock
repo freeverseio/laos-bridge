@@ -2590,6 +2590,7 @@ checksum = "0206175f82b8d6bf6652ff7d71a1e27fd2e4efde587fd368662814d6ec1d9ce0"
 [[package]]
 name = "evochain-primitives"
 version = "0.1.0"
+source = "git+https://github.com/freeverseio/laos-evolution-node.git?branch=dev#d03cee4482f61cbdb0a1b49fdac53ba3d8918119"
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v1.0.0)",
  "frame-system",
@@ -4194,8 +4195,11 @@ dependencies = [
 [[package]]
 name = "laos-evolution-runtime"
 version = "4.0.0-dev"
+source = "git+https://github.com/freeverseio/laos-evolution-node.git?branch=dev#d03cee4482f61cbdb0a1b49fdac53ba3d8918119"
 dependencies = [
+ "bp-header-chain",
  "bp-rococo",
+ "bp-runtime",
  "evochain-primitives",
  "fp-account",
  "frame-benchmarking",
@@ -5745,6 +5749,7 @@ dependencies = [
 [[package]]
 name = "pallet-template"
 version = "4.0.0-dev"
+source = "git+https://github.com/freeverseio/laos-evolution-node.git?branch=dev#d03cee4482f61cbdb0a1b49fdac53ba3d8918119"
 dependencies = [
  "frame-benchmarking",
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v1.0.0)",
