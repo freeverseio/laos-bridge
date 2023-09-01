@@ -1152,13 +1152,6 @@ dependencies = [
 [[package]]
 name = "bridge-runtime-common"
 version = "0.1.0"
-dependencies = [
- "xcm",
-]
-
-[[package]]
-name = "bridge-runtime-common"
-version = "0.1.0"
 source = "git+https://github.com/paritytech/parity-bridges-common.git?branch=polkadot-v1.0.0#48c66fdddd8e68f955fb1a65cca8972228350706"
 dependencies = [
  "bp-header-chain",
@@ -4170,6 +4163,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "laos-bridge-runtime-common"
+version = "0.1.0"
+dependencies = [
+ "xcm",
+]
+
+[[package]]
 name = "laos-relay"
 version = "0.1.0"
 dependencies = [
@@ -4180,7 +4180,7 @@ dependencies = [
  "bp-messages",
  "bp-runtime",
  "bp-test-utils",
- "bridge-runtime-common 0.1.0 (git+https://github.com/paritytech/parity-bridges-common.git?branch=polkadot-v1.0.0)",
+ "bridge-runtime-common",
  "evochain-primitives",
  "finality-grandpa",
  "futures",
@@ -6771,7 +6771,7 @@ dependencies = [
  "bp-laos-ownership",
  "bp-messages",
  "bp-polkadot-core",
- "bridge-runtime-common 0.1.0 (git+https://github.com/paritytech/parity-bridges-common.git?branch=polkadot-v1.0.0)",
+ "bridge-runtime-common",
  "parity-scale-codec",
  "relay-substrate-client",
  "scale-info",
@@ -9400,7 +9400,7 @@ dependencies = [
  "bp-polkadot-core",
  "bp-relayers",
  "bp-runtime",
- "bridge-runtime-common 0.1.0 (git+https://github.com/paritytech/parity-bridges-common.git?branch=polkadot-v1.0.0)",
+ "bridge-runtime-common",
  "equivocation-detector",
  "finality-grandpa",
  "finality-relay",
