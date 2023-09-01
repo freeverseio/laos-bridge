@@ -41,8 +41,8 @@ impl SubstrateParachainsPipeline for OwnershipParachainsToEvochain {
 pub type RococoParachainsToEvochainSubmitParachainHeadsCallBuilder =
     DirectSubmitParachainHeadsCallBuilder<
         OwnershipParachainsToEvochain,
-        node_template_runtime::Runtime,
-        node_template_runtime::WithRococoParachainsInstance,
+        laos_evolution_runtime::Runtime,
+        laos_evolution_runtime::WithRococoParachainsInstance,
     >;
 
 /// `RialtoParachain` to `Millau` bridge definition.

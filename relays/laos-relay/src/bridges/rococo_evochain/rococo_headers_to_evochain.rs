@@ -18,14 +18,11 @@ impl SubstrateFinalityPipeline for RococoFinalityToEvochain {
 }
 
 impl SubstrateFinalitySyncPipeline for RococoFinalityToEvochain {
-    type SubmitFinalityProofCallBuilder = DirectSubmitGrandpaFinalityProofCallBuilder<
-        Self,
-        node_template_runtime::Runtime,
-        node_template_runtime::RococoGrandpaInstance,
-    >;
+    type SubmitFinalityProofCallBuilder =
+        DirectSubmitGrandpaFinalityProofCallBuilder<Self, laos_evolution_runtime::Runtime, ()>;
 }
 
-/// `Rialto` to `Millau` bridge definition.
+/// `Rococo` to `Evochain` bridge definition.
 pub struct RococoToEvochainCliBridge {}
 
 impl CliBridgeBase for RococoToEvochainCliBridge {
