@@ -8,7 +8,7 @@ codec = { package = "parity-scale-codec", version = "3.1.5" }
 
 # Laos Evolution Dependencies
 bp-laos-evolution = { path = "../../primitives/chain-laos-evolution" }
-laos-evolution-runtime = { git = "https://github.com/freeverseio/laos-evolution-node.git", branch = "dev" }
+laos-evolution-runtime = { git = "https://github.com/freeverseio/laos-evolution-node.git", tag = "runtime-101" }
 
 # Substrate Dependencies
 frame-support = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v1.0.0" }
