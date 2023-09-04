@@ -336,22 +336,9 @@ dependencies = [
 ]
 
 [[package]]
-name = "ark-scale"
-version = "0.0.10"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "49b08346a3e38e2be792ef53ee168623c9244d968ff00cd70fb9932f6fe36393"
-dependencies = [
- "ark-ec",
- "ark-ff",
- "ark-serialize",
- "ark-std",
- "parity-scale-codec",
-]
-
-[[package]]
 name = "ark-secret-scalar"
 version = "0.0.2"
-source = "git+https://github.com/w3f/ring-vrf?rev=c86ebd4#d9ba2e34592efd32a492d1636294e021875effb2"
+source = "git+https://github.com/w3f/ring-vrf?rev=c86ebd4#c86ebd4114d3165d05f9ce28c1d9e8d7a9a4e801"
 dependencies = [
  "ark-ec",
  "ark-ff",
@@ -399,7 +386,7 @@ dependencies = [
 [[package]]
 name = "ark-transcript"
 version = "0.0.2"
-source = "git+https://github.com/w3f/ring-vrf?rev=c86ebd4#d9ba2e34592efd32a492d1636294e021875effb2"
+source = "git+https://github.com/w3f/ring-vrf?rev=c86ebd4#c86ebd4114d3165d05f9ce28c1d9e8d7a9a4e801"
 dependencies = [
  "ark-ff",
  "ark-serialize",
@@ -671,7 +658,7 @@ checksum = "bc00ceb34980c03614e35a3a4e218276a0a824e911d07651cd0d858a51e8c0f0"
 dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -745,13 +732,12 @@ dependencies = [
 [[package]]
 name = "bandersnatch_vrfs"
 version = "0.0.1"
-source = "git+https://github.com/w3f/ring-vrf?rev=c86ebd4#d9ba2e34592efd32a492d1636294e021875effb2"
+source = "git+https://github.com/w3f/ring-vrf?rev=c86ebd4#c86ebd4114d3165d05f9ce28c1d9e8d7a9a4e801"
 dependencies = [
  "ark-bls12-381",
  "ark-ec",
  "ark-ed-on-bls12-381-bandersnatch",
  "ark-ff",
- "ark-scale",
  "ark-serialize",
  "ark-std",
  "dleq_vrf",
@@ -1452,7 +1438,7 @@ dependencies = [
 [[package]]
 name = "common"
 version = "0.1.0"
-source = "git+https://github.com/w3f/ring-proof?rev=0e948f3#0e948f3c28cbacecdd3020403c4841c0eb339213"
+source = "git+https://github.com/w3f/ring-proof#86572101f4210647984ab4efedba6b3fcc890895"
 dependencies = [
  "ark-ec",
  "ark-ff",
@@ -1461,6 +1447,7 @@ dependencies = [
  "ark-std",
  "fflonk",
  "merlin 3.0.0",
+ "rand_chacha 0.3.1",
 ]
 
 [[package]]
@@ -1903,7 +1890,7 @@ checksum = "83fdaf97f4804dcebfa5862639bc9ce4121e82140bec2a987ac5140294865b5b"
 dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -1943,7 +1930,7 @@ dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
  "scratch",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -1960,7 +1947,7 @@ checksum = "2fa16a70dd58129e4dfffdff535fb1bce66673f7bbeec4a5a1765a504e1ccd84"
 dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -2008,7 +1995,7 @@ dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
  "strsim 0.10.0",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -2030,7 +2017,7 @@ checksum = "836a9bbc7ad63342d6d6e7b815ccab164bc77a2d95d84bc3117a8c0d5c98e2d5"
 dependencies = [
  "darling_core 0.20.3",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -2245,17 +2232,16 @@ checksum = "487585f4d0c6655fe74905e2504d8ad6908e4db67f744eb140876906c2f3175d"
 dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
 name = "dleq_vrf"
 version = "0.0.2"
-source = "git+https://github.com/w3f/ring-vrf?rev=c86ebd4#d9ba2e34592efd32a492d1636294e021875effb2"
+source = "git+https://github.com/w3f/ring-vrf?rev=c86ebd4#c86ebd4114d3165d05f9ce28c1d9e8d7a9a4e801"
 dependencies = [
  "ark-ec",
  "ark-ff",
- "ark-scale",
  "ark-secret-scalar",
  "ark-serialize",
  "ark-std",
@@ -2286,7 +2272,7 @@ dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
  "regex",
- "syn 2.0.29",
+ "syn 2.0.31",
  "termcolor",
  "toml 0.7.6",
  "walkdir",
@@ -2608,7 +2594,7 @@ dependencies = [
  "fs-err",
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -2962,7 +2948,7 @@ dependencies = [
  "proc-macro-warning",
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -2980,7 +2966,7 @@ dependencies = [
  "proc-macro-warning",
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -2992,7 +2978,7 @@ dependencies = [
  "proc-macro-crate",
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -3004,7 +2990,7 @@ dependencies = [
  "proc-macro-crate",
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -3014,7 +3000,7 @@ source = "git+https://github.com/paritytech/substrate?branch=master#033d4e86cc7e
 dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -3024,7 +3010,7 @@ source = "git+https://github.com/paritytech/substrate?branch=polkadot-v1.0.0#948
 dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -3166,7 +3152,7 @@ checksum = "89ca545a94061b6365f2c7355b4b32bd20df3ff95f02da9329b34ccc3bd6ee72"
 dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -4906,7 +4892,7 @@ dependencies = [
  "macro_magic_core",
  "macro_magic_macros",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -4920,7 +4906,7 @@ dependencies = [
  "macro_magic_core_macros",
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -4931,7 +4917,7 @@ checksum = "c12469fc165526520dff2807c2975310ab47cf7190a45b99b49a7dc8befab17b"
 dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -4942,7 +4928,7 @@ checksum = "b8fb85ec1620619edf2984a7693497d4ec88a9665d8b87e942856884c92dbf2a"
 dependencies = [
  "macro_magic_core",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -6047,7 +6033,7 @@ checksum = "4359fd9c9171ec6e8c62926d6faaf553a8dc3f64e1507e76da7911b4f6a04405"
 dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -6314,7 +6300,7 @@ checksum = "3d1eaa7fa0aa1929ffdf7eeb6eac234dde6268914a14ad44d23521ab6a9b258e"
 dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -6369,7 +6355,7 @@ checksum = "440f724eba9f6996b75d63681b0a92b06947f1457076d503a4d2e2c8f56442b8"
 dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -6718,7 +6704,7 @@ checksum = "7f7473c2cfcf90008193dd0e3e16599455cb601a9fce322b5bb55de799664925"
 dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -6934,13 +6920,14 @@ dependencies = [
 [[package]]
 name = "ring"
 version = "0.1.0"
-source = "git+https://github.com/w3f/ring-proof?rev=0e948f3#0e948f3c28cbacecdd3020403c4841c0eb339213"
+source = "git+https://github.com/w3f/ring-proof#86572101f4210647984ab4efedba6b3fcc890895"
 dependencies = [
  "ark-ec",
  "ark-ff",
  "ark-poly",
  "ark-serialize",
  "ark-std",
+ "blake2",
  "common",
  "fflonk",
  "merlin 3.0.0",
@@ -7256,7 +7243,7 @@ dependencies = [
  "proc-macro-crate",
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -7905,7 +7892,7 @@ checksum = "4eca7ac642d82aa35b60049a6eccb4be6be75e599bd2e9adb5f875a737654af2"
 dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -8315,7 +8302,7 @@ dependencies = [
  "proc-macro-crate",
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -8329,7 +8316,7 @@ dependencies = [
  "proc-macro-crate",
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -8630,7 +8617,7 @@ source = "git+https://github.com/paritytech/substrate?branch=master#033d4e86cc7e
 dependencies = [
  "quote 1.0.33",
  "sp-core-hashing 9.0.0 (git+https://github.com/paritytech/substrate?branch=master)",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -8640,7 +8627,7 @@ source = "git+https://github.com/paritytech/substrate?branch=polkadot-v1.0.0#948
 dependencies = [
  "quote 1.0.33",
  "sp-core-hashing 9.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-v1.0.0)",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -8659,7 +8646,7 @@ source = "git+https://github.com/paritytech/substrate?branch=master#033d4e86cc7e
 dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -8669,7 +8656,7 @@ source = "git+https://github.com/paritytech/substrate?branch=polkadot-v1.0.0#948
 dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -8977,7 +8964,7 @@ dependencies = [
  "proc-macro-crate",
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -8989,7 +8976,7 @@ dependencies = [
  "proc-macro-crate",
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -9270,7 +9257,7 @@ dependencies = [
  "parity-scale-codec",
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -9281,7 +9268,7 @@ dependencies = [
  "parity-scale-codec",
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -9476,7 +9463,7 @@ dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
  "rustversion",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -9681,7 +9668,7 @@ dependencies = [
  "quote 1.0.33",
  "scale-info",
  "subxt-metadata 0.30.1",
- "syn 2.0.29",
+ "syn 2.0.31",
  "thiserror",
  "tokio",
 ]
@@ -9701,7 +9688,7 @@ dependencies = [
  "quote 1.0.33",
  "scale-info",
  "subxt-metadata 0.31.0",
- "syn 2.0.29",
+ "syn 2.0.31",
  "thiserror",
  "tokio",
 ]
@@ -9749,7 +9736,7 @@ dependencies = [
  "darling 0.20.3",
  "proc-macro-error",
  "subxt-codegen 0.30.1",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -9761,7 +9748,7 @@ dependencies = [
  "darling 0.20.3",
  "proc-macro-error",
  "subxt-codegen 0.31.0",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -9814,9 +9801,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-version = "2.0.29"
+version = "2.0.31"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c324c494eba9d92503e6f1ef2e6df781e78f6a7705a0202d9801b198807d518a"
+checksum = "718fa2415bcb8d8bd775917a1bf12a7931b6dfa890753378538118181e0cb398"
 dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
@@ -9922,9 +9909,9 @@ dependencies = [
 
 [[package]]
 name = "thiserror"
-version = "1.0.47"
+version = "1.0.48"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "97a802ec30afc17eee47b2855fc72e0c4cd62be9b4efe6591edde0ec5bd68d8f"
+checksum = "9d6d7a740b8a666a7e828dd00da9c0dc290dff53154ea77ac109281de90589b7"
 dependencies = [
  "thiserror-impl",
 ]
@@ -9951,13 +9938,13 @@ dependencies = [
 
 [[package]]
 name = "thiserror-impl"
-version = "1.0.47"
+version = "1.0.48"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6bb623b56e39ab7dcd4b1b98bb6c8f8d907ed255b18de254088016b27a8ee19b"
+checksum = "49922ecae66cc8a249b77e68d1d0623c1b2c514f0060c27cdc68bd62a1219d35"
 dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -10091,7 +10078,7 @@ checksum = "630bdcf245f78637c13ec01ffae6187cca34625e8c63150d424b59e55af2675e"
 dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -10217,7 +10204,7 @@ checksum = "5f4f31f56159e98206da9efd823404b79b6ef3143b4a7ab76e67b1751b25a4ab"
 dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -10390,7 +10377,7 @@ checksum = "97fee6b57c6a41524a810daee9286c02d7752c4253064d0b05472833a438f675"
 dependencies = [
  "cfg-if",
  "digest 0.10.7",
- "rand 0.8.5",
+ "rand 0.7.3",
  "static_assertions",
 ]
 
@@ -10624,7 +10611,7 @@ dependencies = [
  "once_cell",
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
  "wasm-bindgen-shared",
 ]
 
@@ -10658,7 +10645,7 @@ checksum = "54681b18a46765f095758388f2d0cf16eb8d4169b639ab575a8f5693af210c7b"
 dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
  "wasm-bindgen-backend",
  "wasm-bindgen-shared",
 ]
@@ -11636,7 +11623,7 @@ dependencies = [
  "Inflector",
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
@@ -11691,7 +11678,7 @@ checksum = "ce36e65b0d2999d2aafac989fb249189a141aee1f53c612c1f37d72631959f69"
 dependencies = [
  "proc-macro2 1.0.66",
  "quote 1.0.33",
- "syn 2.0.29",
+ "syn 2.0.31",
 ]
 
 [[package]]
